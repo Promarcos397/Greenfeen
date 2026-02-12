@@ -1,0 +1,10 @@
+{
+    "name": "greenfeen",
+    "compatibility_date": "2025-02-12",
+    "assets": {
+        "directory": "."
+    },
+    "observability": {
+        "enabled": true
+    }
+}
