@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ═══════════════════════════════════════
-    // ─── Mobile Menu (Slide-in Drawer) ───
-    // ═══════════════════════════════════════
+    // mobile menu setup
     const hamburger = document.querySelector('.hamburger');
     const navMobile = document.querySelector('.nav-mobile');
 
@@ -44,14 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ═══════════════════════════════════════
-    // ─── Cart Display ───
-    // ═══════════════════════════════════════
+    // cart display items
     updateCartDisplay();
 
-    // ═══════════════════════════════════════
-    // ─── Add-to-Cart Buttons ───
-    // ═══════════════════════════════════════
+    // add to cart functionality
     const MAX_QTY_PER_ITEM = 10;
 
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
@@ -101,9 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ═══════════════════════════════════════
-    // ─── Shop Page Filters ───
-    // ═══════════════════════════════════════
+    // shop page filtering
     const filterButtons = document.querySelectorAll('.filter-btn');
     const productCards = document.querySelectorAll('.product-card[data-category]');
 
@@ -147,9 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ═══════════════════════════════════════
-    // ─── Newsletter Form ─── 
-    // ═══════════════════════════════════════
+    // newsletter subscription
     const newsletterForm = document.querySelector('.newsletter-form');
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', (e) => {
@@ -169,17 +159,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // ═══════════════════════════════════════
-    // ─── Render Cart Page ───
-    // ═══════════════════════════════════════
+    // render cart page
     const cartItemsContainer = document.querySelector('.cart-items');
     if (cartItemsContainer) {
         renderCartPage();
     }
 
-    // ═══════════════════════════════════════
-    // ─── Checkout Page ───
-    // ═══════════════════════════════════════
+    // checkout page logic
     const checkoutSummary = document.querySelector('.checkout-items');
     if (checkoutSummary) {
         renderCheckoutSummary();
@@ -243,9 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ═══════════════════════════════════════
-    // ─── Contact Form — EmailJS ───
-    // ═══════════════════════════════════════
+    // contact form handling
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -308,9 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// ═══════════════════════════════════════════
-// ═══ HELPER FUNCTIONS ═══
-// ═══════════════════════════════════════════
+// helper functions
 
 function completeOrder(orderData, submitBtn) {
     localStorage.removeItem('greenfeen_cart');

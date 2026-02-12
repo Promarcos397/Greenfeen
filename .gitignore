@@ -1,0 +1,7 @@
+node_modules
+.DS_Store
+debug_version
+emailjs_newsletter_template.html
+development_notes.md
+emailjs_template.html 
+project_design_documentation.md
