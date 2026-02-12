@@ -1,0 +1,8 @@
+{
+  "name": "greenfeen",
+  "compatibility_date": "2025-02-12",
+  "pages_build_output_dir": ".",
+  "observability": {
+    "enabled": true
+  }
+}
