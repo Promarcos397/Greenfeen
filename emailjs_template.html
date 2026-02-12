@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenfeen — Order Confirmation</title>
+    <!--
+        ════════════════════════════════════════════════════
+        EMAILJS TEMPLATE — Paste this into your EmailJS
+        dashboard under Templates → Content → HTML tab.
+        ════════════════════════════════════════════════════
+        
+        Template variables used (must match the JS code):
+        {{customer_name}}    — Customer's full name
+        {{customer_email}}   — Customer's email address
+        {{address}}          — Full delivery address
+        {{phone}}            — Phone number
+        {{order_items}}      — Line-by-line items with qty & price
+        {{order_total}}      — Total order value
+        {{order_number}}     — Unique order reference (GF-XXXXX)
+    -->
+</head>
+
+<body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: 'Helvetica Neue', Arial, sans-serif;">
+
+    <!-- Container -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+        style="background-color: #f4f4f4; padding: 30px 0;">
+        <tr>
+            <td align="center">
+                <table role="presentation" width="600" cellpadding="0" cellspacing="0"
+                    style="background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+
+                    <!-- Header -->
+                    <tr>
+                        <td
+                            style="background: linear-gradient(135deg, #2E4A32 0%, #3D6B45 100%); padding: 40px 30px; text-align: center;">
+                            <h1
+                                style="color: #ffffff; margin: 0; font-size: 28px; font-family: Georgia, 'Times New Roman', serif; font-style: italic;">
+                                🌿 Greenfeen</h1>
+                            <p
+                                style="color: rgba(255,255,255,0.85); margin: 8px 0 0; font-size: 14px; letter-spacing: 1px;">
+                                ORDER CONFIRMATION</p>
+                        </td>
+                    </tr>
+
+                    <!-- Thank You -->
+                    <tr>
+                        <td style="padding: 40px 30px 20px;">
+                            <h2 style="color: #2E4A32; margin: 0 0 10px; font-size: 22px;">Thank you, {{customer_name}}!
+                            </h2>
+                            <p style="color: #666; margin: 0; font-size: 15px; line-height: 1.6;">Your order has been
+                                received and is being prepared. Here's a summary of your purchase.</p>
+                        </td>
+                    </tr>
+
+                    <!-- Order Number -->
+                    <tr>
+                        <td style="padding: 0 30px 20px;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+                                style="background-color: #f0f7f1; border-radius: 8px; border-left: 4px solid #2E4A32;">
+                                <tr>
+                                    <td style="padding: 15px 20px;">
+                                        <p
+                                            style="margin: 0; color: #888; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">
+                                            Order Reference</p>
+                                        <p style="margin: 4px 0 0; color: #2E4A32; font-size: 20px; font-weight: bold;">
+                                            {{order_number}}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Divider -->
+                    <tr>
+                        <td style="padding: 0 30px;">
+                            <hr style="border: none; border-top: 1px solid #eee; margin: 0;">
+                        </td>
+                    </tr>
+
+                    <!-- Order Items -->
+                    <tr>
+                        <td style="padding: 25px 30px;">
+                            <h3 style="color: #2E4A32; margin: 0 0 15px; font-size: 16px;">📦 Items Ordered</h3>
+                            <pre
+                                style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #444; line-height: 1.8; margin: 0; white-space: pre-wrap; background: #fafafa; padding: 15px; border-radius: 6px;">{{order_items}}</pre>
+                        </td>
+                    </tr>
+
+                    <!-- Total -->
+                    <tr>
+                        <td style="padding: 0 30px 25px;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+                                style="background: linear-gradient(135deg, #2E4A32 0%, #3D6B45 100%); border-radius: 8px;">
+                                <tr>
+                                    <td style="padding: 18px 20px; color: #fff; font-size: 16px;">Total</td>
+                                    <td
+                                        style="padding: 18px 20px; color: #fff; font-size: 22px; font-weight: bold; text-align: right;">
+                                        {{order_total}}</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Divider -->
+                    <tr>
+                        <td style="padding: 0 30px;">
+                            <hr style="border: none; border-top: 1px solid #eee; margin: 0;">
+                        </td>
+                    </tr>
+
+                    <!-- Delivery Address -->
+                    <tr>
+                        <td style="padding: 25px 30px;">
+                            <h3 style="color: #2E4A32; margin: 0 0 10px; font-size: 16px;">🏠 Delivery Address</h3>
+                            <p style="color: #555; font-size: 14px; line-height: 1.6; margin: 0;">{{address}}</p>
+                            <p style="color: #888; font-size: 13px; margin: 8px 0 0;">Phone: {{phone}}</p>
+                        </td>
+                    </tr>
+
+                    <!-- CTA -->
+                    <tr>
+                        <td style="padding: 10px 30px 30px; text-align: center;">
+                            <a href="https://yoursite.com/shop.html"
+                                style="display: inline-block; background-color: #C1944A; color: #fff; text-decoration: none; padding: 14px 40px; border-radius: 6px; font-weight: bold; font-size: 14px;">Continue
+                                Shopping</a>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background-color: #1A221D; padding: 25px 30px; text-align: center;">
+                            <p style="color: #aebdb2; font-size: 12px; margin: 0;">© 2026 Greenfeen. All rights
+                                reserved.</p>
+                            <p style="color: #7a9480; font-size: 11px; margin: 8px 0 0;">This email was sent to
+                                {{customer_email}}</p>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!--
+  ╔═══════════════════════════════════════════════════════╗
+  ║  GREENFEEN — Contact Form Notification Email Template   ║
+  ║                                                          ║
+  ║  This is sent to YOU (the site owner) when someone       ║
+  ║  fills in the Contact Us form.                           ║
+  ║                                                          ║
+  ║  HOW TO USE:                                             ║
+  ║  1. Go to EmailJS → Email Templates → Create New         ║
+  ║  2. Name it "template_contact"                           ║
+  ║  3. Switch to "Code Editor" tab                          ║
+  ║  4. Paste this entire file                               ║
+  ║  5. Set "To Email" to YOUR email address                 ║
+  ║  6. Set "Reply To" to {{from_email}}                     ║
+  ║  7. Set "Subject" to: New Contact: {{subject}}           ║
+  ║  8. Save                                                 ║
+  ╚═══════════════════════════════════════════════════════╝
+
+  Template Variables (auto-filled by script.js):
+    {{from_name}}    — Customer's name
+    {{from_email}}   — Customer's email
+    {{subject}}      — Selected subject (Order Inquiry / Product Question / Other)
+    {{message}}      — Their message
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body style="margin: 0; padding: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #f4f7f5;">
+
+    <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f7f5; padding: 40px 0;">
+        <tr>
+            <td align="center">
+                <table width="600" cellpadding="0" cellspacing="0"
+                    style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+
+                    <!-- Header -->
+                    <tr>
+                        <td style="background-color: #244A32; padding: 30px 40px; text-align: center;">
+                            <h1 style="color: #ffffff; margin: 0; font-size: 24px; font-family: Georgia, serif;">
+                                🌿 Greenfeen — New Contact Message
+                            </h1>
+                        </td>
+                    </tr>
+
+                    <!-- Body -->
+                    <tr>
+                        <td style="padding: 30px 40px;">
+
+                            <p style="font-size: 16px; color: #333; margin: 0 0 20px;">
+                                You have a new message from the website contact form:
+                            </p>
+
+                            <!-- Contact Details Table -->
+                            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 24px;">
+                                <tr>
+                                    <td
+                                        style="padding: 12px 16px; background-color: #f9fafb; border-bottom: 1px solid #eee; width: 120px; font-weight: bold; color: #244A32; font-size: 14px;">
+                                        Name
+                                    </td>
+                                    <td
+                                        style="padding: 12px 16px; background-color: #f9fafb; border-bottom: 1px solid #eee; font-size: 14px; color: #333;">
+                                        {{from_name}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        style="padding: 12px 16px; border-bottom: 1px solid #eee; width: 120px; font-weight: bold; color: #244A32; font-size: 14px;">
+                                        Email
+                                    </td>
+                                    <td
+                                        style="padding: 12px 16px; border-bottom: 1px solid #eee; font-size: 14px; color: #333;">
+                                        <a href="mailto:{{from_email}}"
+                                            style="color: #D4694A; text-decoration: none;">{{from_email}}</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        style="padding: 12px 16px; background-color: #f9fafb; border-bottom: 1px solid #eee; width: 120px; font-weight: bold; color: #244A32; font-size: 14px;">
+                                        Subject
+                                    </td>
+                                    <td
+                                        style="padding: 12px 16px; background-color: #f9fafb; border-bottom: 1px solid #eee; font-size: 14px; color: #333;">
+                                        {{subject}}
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Message Box -->
+                            <div
+                                style="background-color: #f0f5f1; border-left: 4px solid #244A32; padding: 20px; border-radius: 0 6px 6px 0; margin-bottom: 24px;">
+                                <p
+                                    style="font-size: 13px; color: #888; margin: 0 0 8px; text-transform: uppercase; letter-spacing: 1px;">
+                                    Message</p>
+                                <p
+                                    style="font-size: 15px; color: #333; margin: 0; line-height: 1.6; white-space: pre-wrap;">
+                                    {{message}}</p>
+                            </div>
+
+                            <!-- Reply Button -->
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center" style="padding: 10px 0;">
+                                        <a href="mailto:{{from_email}}?subject=Re: {{subject}}"
+                                            style="display: inline-block; background-color: #244A32; color: #ffffff; text-decoration: none; padding: 14px 36px; border-radius: 6px; font-weight: bold; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">
+                                            Reply to {{from_name}}
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td
+                            style="padding: 20px 40px; background-color: #f9fafb; text-align: center; border-top: 1px solid #eee;">
+                            <p style="font-size: 12px; color: #999; margin: 0;">
+                                This message was sent from the Greenfeen website contact form.
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Greenfeen</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="nav-left">
+                    <a href="shop.html" class="active">Shop</a>
+                    <a href="tips.html">Gardening Tips</a>
+                </div>
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <i class="ph-fill ph-plant" style="font-size: 2rem; color: var(--primary-green);"></i>
+                    Greenfeen
+                </a>
+                <div class="nav-right">
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <div class="cart-icon" onclick="window.location.href='cart.html'">
+                        <i class="ph ph-shopping-cart"></i> <span class="cart-count">0</span>
+                    </div>
+                </div>
+                <div class="hamburger"><i class="ph ph-list"></i></div>
+                <div class="nav-mobile">
+                    <a href="shop.html">Shop</a>
+                    <a href="tips.html">Gardening Tips</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="cart.html">🛒 Cart</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mt-2">
+        <h1>Shop Our Collection</h1>
+        <p class="product-count" style="color: #777; margin-bottom: 1rem;">Showing 18 products</p>
+
+        <!-- Filters -->
+        <div style="margin-bottom: 2rem; display: flex; gap: 15px; flex-wrap: wrap;">
+            <button class="btn filter-btn filter-active" data-filter="all"
+                style="background: var(--primary-green); color: #fff;">All</button>
+            <button class="btn filter-btn" data-filter="seeds"
+                style="background: transparent; color: var(--text-color); border: 1px solid #ddd;">Seeds</button>
+            <button class="btn filter-btn" data-filter="pots"
+                style="background: transparent; color: var(--text-color); border: 1px solid #ddd;">Pots &
+                Planters</button>
+            <button class="btn filter-btn" data-filter="tools"
+                style="background: transparent; color: var(--text-color); border: 1px solid #ddd;">Tools</button>
+            <button class="btn filter-btn" data-filter="plants"
+                style="background: transparent; color: var(--text-color); border: 1px solid #ddd;">Plants</button>
+            <button class="btn filter-btn" data-filter="soil"
+                style="background: transparent; color: var(--text-color); border: 1px solid #ddd;">Soil &
+                Compost</button>
+        </div>
+
+        <div class="product-grid">
+            <!-- ═══ SEEDS (4) ═══ -->
+            <div class="product-card" data-category="seeds">
+                <div class="product-image">
+                    <img src="assets/images/seed_packet_tomato.png" alt="Heirloom Tomato Seeds"
+                        onerror="this.src='https://placehold.co/400x400?text=Tomato+Seeds'">
+                </div>
+                <div class="product-info">
+                    <h3>Heirloom Tomato Seeds</h3>
+                    <p>Rich, flavorful, and perfect for salads.</p>
+                    <p class="product-price">£3.50</p>
+                    <button class="btn add-to-cart" data-id="1" data-name="Heirloom Tomato Seeds" data-price="3.50">Add
+                        to Cart</button>
+                    <br><a href="product.html?id=1" style="font-size: 0.9rem; text-decoration: underline;">View
+                        Details</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="seeds">
+                <div class="product-image">
+                    <img src="assets/images/seed_packet_basil.png" alt="Genovese Basil Seeds"
+                        onerror="this.src='https://placehold.co/400x400?text=Basil+Seeds'">
+                </div>
+                <div class="product-info">
+                    <h3>Genovese Basil Seeds</h3>
+                    <p>Aromatic essential for any kitchen garden.</p>
+                    <p class="product-price">£2.95</p>
+                    <button class="btn add-to-cart" data-id="4" data-name="Genovese Basil Seeds" data-price="2.95">Add
+                        to Cart</button>
+                    <br><a href="product.html?id=4" style="font-size: 0.9rem; text-decoration: underline;">View
+                        Details</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="seeds">
+                <div class="product-image">
+                    <img src="assets/images/seed_packet_sunflower.png" alt="Giant Sunflower Seeds"
+                        onerror="this.src='https://placehold.co/400x400?text=Sunflower+Seeds'">
+                </div>
+                <div class="product-info">
+                    <h3>Giant Sunflower Seeds</h3>
+                    <p>Grow tall, happy flowers this summer.</p>
+                    <p class="product-price">£3.00</p>
+                    <button class="btn add-to-cart" data-id="6" data-name="Giant Sunflower Seeds" data-price="3.00">Add
+                        to Cart</button>
+                    <br><a href="product.html?id=6" style="font-size: 0.9rem; text-decoration: underline;">View
+                        Details</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="seeds">
+                <div class="product-image">
+                    <img src="assets/images/seed_packet_lavender.png" alt="English Lavender Seeds"
+                        onerror="this.src='https://placehold.co/400x400?text=Lavender+Seeds'">
+                </div>
+                <div class="product-info">
+                    <h3>English Lavender Seeds</h3>
+                    <p>Fragrant, calming, and bee-friendly.</p>
+                    <p class="product-price">£3.25</p>
+                    <button class="btn add-to-cart" data-id="9" data-name="English Lavender Seeds" data-price="3.25">Add
+                        to Cart</button>
+                    <br><a href="product.html?id=9" style="font-size: 0.9rem; text-decoration: underline;">View
+                        Details</a>
+                </div>
+            </div>
+
+            <!-- ═══ POTS & PLANTERS (3) ═══ -->
+            <div class="product-card" data-category="pots">
+                <div class="product-image">
+                    <img src="assets/images/pot_clay.png" alt="Terracotta Pot"
+                        onerror="this.src='https://placehold.co/400x400?text=Clay+Pot'">
+                </div>
+                <div class="product-info">
+                    <h3>Classic Terracotta Pot</h3>
+                    <p>Breathable material for healthy roots.</p>
+                    <p class="product-price">£9.50</p>
+                    <button class="btn add-to-cart" data-id="2" data-name="Classic Terracotta Pot" data-price="9.50">Add
+                        to Cart</button>
+                    <br><a href="product.html?id=2" style="font-size: 0.9rem; text-decoration: underline;">View
+                        Details</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="pots">
+                <div class="product-image">
+                    <img src="assets/images/pot_ceramic_white.png" alt="White Ceramic Planter"
+                        onerror="this.src='https://placehold.co/400x400?text=Ceramic+Planter'">
+                </div>
+                <div class="product-info">
+                    <h3>White Ceramic Planter</h3>
+                    <p>Minimalist design with built-in saucer.</p>
+                    <p class="product-price">£16.00</p>
+                    <button class="btn add-to-cart" data-id="13" data-name="White Ceramic Planter"
+                        data-price="16.00">Add to Cart</button>
+                    <br><a href="product.html?id=13" style="font-size: 0.9rem; text-decoration: underline;">View
+                        Details</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="pots">
+                <div class="product-image">
+                    <img src="assets/images/pot_hanging_basket.png" alt="Woven Hanging Basket"
+                        onerror="this.src='https://placehold.co/400x400?text=Hanging+Basket'">
+                </div>
+                <div class="product-info">
+                    <h3>Woven Hanging Basket</h3>
+                    <p>Natural rattan weave with coconut liner.</p>
+                    <p class="product-price">£14.00</p>
+                    <button class="btn add-to-cart" data-id="14" data-name="Woven Hanging Basket" data-price="14.00">Add
+                        to Cart</button>
+                    <br><a href="product.html?id=14" style="font-size: 0.9rem; text-decoration: underline;">View
+                        Details</a>
+                </div>
+            </div>
+
+            <!-- ═══ TOOLS (5) ═══ -->
+            <div class="product-card" data-category="tools">
+                <div class="product-image">
+                    <img src="assets/images/tool_trowel.png" alt="Garden Trowel"
+                        onerror="this.src='https://placehold.co/400x400?text=Garden+Trowel'">
+                </div>
+                <div class="product-info">
+                    <h3>Ergonomic Trowel</h3>
+                    <p>Stainless steel with ash wood handle.</p>
+                    <p class="product-price">£14.50</p>
+                    <button class="btn add-to-cart" data-id="3" data-name="Ergonomic Trowel" data-price="14.50">Add to
+                        Cart</button>
+                    <br><a href="product.html?id=3" style="font-size: 0.9rem; text-decoration: underline;">View
+                        Details</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="tools">
+                <div class="product-image">
+                    <img src="assets/images/tool_shears.png" alt="Pruning Shears"
+                        onerror="this.src='https://placehold.co/400x400?text=Pruning+Shears'">
+                </div>
+                <div class="product-info">
+                    <h3>Pro Pruning Shears</h3>
+                    <p>Sharp, durable, and comfortable grip.</p>
+                    <p class="product-price">£18.00</p>
+                    <button class="btn add-to-cart" data-id="5" data-name="Pro Pruning Shears" data-price="18.00">Add to
+                        Cart</button>
+                    <br><a href="product.html?id=5" style="font-size: 0.9rem; text-decoration: underline;">View
+                        Details</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="tools">
+                <div class="product-image">
+                    <img src="assets/images/tool_watering_can.png" alt="Vintage Watering Can"
+                        onerror="this.src='https://placehold.co/400x400?text=Watering+Can'">
+                </div>
+                <div class="product-info">
+                    <h3>Vintage Watering Can</h3>
+                    <p>Classic zinc finish, holds 5 litres.</p>
+                    <p class="product-price">£22.00</p>
+                    <button class="btn add-to-cart" data-id="7" data-name="Vintage Watering Can" data-price="22.00">Add
+                        to Cart</button>
+                    <br><a href="product.html?id=7" style="font-size: 0.9rem; text-decoration: underline;">View
+                        Details</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="tools">
+                <div class="product-image">
+                    <img src="assets/images/tool_gloves.png" alt="Leather Gardening Gloves"
+                        onerror="this.src='https://placehold.co/400x400?text=Gardening+Gloves'">
+                </div>
+                <div class="product-info">
+                    <h3>Leather Gardening Gloves</h3>
+                    <p>Protect your hands in style.</p>
+                    <p class="product-price">£12.50</p>
+                    <button class="btn add-to-cart" data-id="8" data-name="Leather Gardening Gloves"
+                        data-price="12.50">Add to Cart</button>
+                    <br><a href="product.html?id=8" style="font-size: 0.9rem; text-decoration: underline;">View
+                        Details</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="tools">
+                <div class="product-image">
+                    <img src="assets/images/tool_cultivator.png" alt="Hand Cultivator"
+                        onerror="this.src='https://placehold.co/400x400?text=Hand+Cultivator'">
+                </div>
+                <div class="product-info">
+                    <h3>Hand Cultivator</h3>
+                    <p>Ideal for loosening soil and aerating.</p>
+                    <p class="product-price">£8.95</p>
+                    <button class="btn add-to-cart" data-id="11" data-name="Hand Cultivator" data-price="8.95">Add to
+                        Cart</button>
+                    <br><a href="product.html?id=11" style="font-size: 0.9rem; text-decoration: underline;">View
+                        Details</a>
+                </div>
+            </div>
+
+            <!-- ═══ PLANTS (3) ═══ -->
+            <div class="product-card" data-category="plants">
+                <div class="product-image">
+                    <img src="assets/images/plant_fern.png" alt="Boston Fern"
+                        onerror="this.src='https://placehold.co/400x400?text=Boston+Fern'">
+                </div>
+                <div class="product-info">
+                    <h3>Boston Fern</h3>
+                    <p>Lush, trailing fronds for indirect light.</p>
+                    <p class="product-price">£15.00</p>
+                    <button class="btn add-to-cart" data-id="10" data-name="Boston Fern" data-price="15.00">Add to
+                        Cart</button>
+                    <br><a href="product.html?id=10" style="font-size: 0.9rem; text-decoration: underline;">View
+                        Details</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="plants">
+                <div class="product-image">
+                    <img src="assets/images/plant_snake.png" alt="Snake Plant"
+                        onerror="this.src='https://placehold.co/400x400?text=Snake+Plant'">
+                </div>
+                <div class="product-info">
+                    <h3>Snake Plant</h3>
+                    <p>Nearly indestructible, perfect for beginners.</p>
+                    <p class="product-price">£12.00</p>
+                    <button class="btn add-to-cart" data-id="15" data-name="Snake Plant" data-price="12.00">Add to
+                        Cart</button>
+                    <br><a href="product.html?id=15" style="font-size: 0.9rem; text-decoration: underline;">View
+                        Details</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="plants">
+                <div class="product-image">
+                    <img src="assets/images/plant_succulent.png" alt="Succulent Trio"
+                        onerror="this.src='https://placehold.co/400x400?text=Succulent+Trio'">
+                </div>
+                <div class="product-info">
+                    <h3>Succulent Trio</h3>
+                    <p>Three assorted mini succulents in terracotta.</p>
+                    <p class="product-price">£18.50</p>
+                    <button class="btn add-to-cart" data-id="16" data-name="Succulent Trio" data-price="18.50">Add to
+                        Cart</button>
+                    <br><a href="product.html?id=16" style="font-size: 0.9rem; text-decoration: underline;">View
+                        Details</a>
+                </div>
+            </div>
+
+            <!-- ═══ SOIL & COMPOST (3) ═══ -->
+            <div class="product-card" data-category="soil">
+                <div class="product-image">
+                    <img src="assets/images/soil_mix.png" alt="Organic Potting Mix"
+                        onerror="this.src='https://placehold.co/400x400?text=Potting+Mix'">
+                </div>
+                <div class="product-info">
+                    <h3>Organic Potting Mix</h3>
+                    <p>Premium blend for all container plants.</p>
+                    <p class="product-price">£6.50</p>
+                    <button class="btn add-to-cart" data-id="12" data-name="Organic Potting Mix" data-price="6.50">Add
+                        to Cart</button>
+                    <br><a href="product.html?id=12" style="font-size: 0.9rem; text-decoration: underline;">View
+                        Details</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="soil">
+                <div class="product-image">
+                    <img src="assets/images/soil_cactus_mix.png" alt="Cactus & Succulent Soil"
+                        onerror="this.src='https://placehold.co/400x400?text=Cactus+Soil'">
+                </div>
+                <div class="product-info">
+                    <h3>Cactus & Succulent Soil</h3>
+                    <p>Fast-draining gritty mix for arid plants.</p>
+                    <p class="product-price">£5.50</p>
+                    <button class="btn add-to-cart" data-id="17" data-name="Cactus & Succulent Soil"
+                        data-price="5.50">Add to Cart</button>
+                    <br><a href="product.html?id=17" style="font-size: 0.9rem; text-decoration: underline;">View
+                        Details</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="soil">
+                <div class="product-image">
+                    <img src="assets/images/soil_mulch.png" alt="Bark Mulch"
+                        onerror="this.src='https://placehold.co/400x400?text=Bark+Mulch'">
+                </div>
+                <div class="product-info">
+                    <h3>Bark Mulch</h3>
+                    <p>Natural pine bark for moisture retention.</p>
+                    <p class="product-price">£7.95</p>
+                    <button class="btn add-to-cart" data-id="18" data-name="Bark Mulch" data-price="7.95">Add to
+                        Cart</button>
+                    <br><a href="product.html?id=18" style="font-size: 0.9rem; text-decoration: underline;">View
+                        Details</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                &copy; 2026 Greenfeen. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

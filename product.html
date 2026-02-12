@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Greenfeen</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="nav-left">
+                    <a href="shop.html">Shop</a>
+                    <a href="tips.html">Gardening Tips</a>
+                </div>
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <i class="ph-fill ph-plant" style="font-size: 2rem; color: var(--primary-green);"></i>
+                    Greenfeen
+                </a>
+                <div class="nav-right">
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <div class="cart-icon" onclick="window.location.href='cart.html'">
+                        <i class="ph ph-shopping-cart"></i> <span class="cart-count">0</span>
+                    </div>
+                </div>
+                <div class="hamburger"><i class="ph ph-list"></i></div>
+                <div class="nav-mobile">
+                    <a href="shop.html">Shop</a>
+                    <a href="tips.html">Gardening Tips</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="cart.html">🛒 Cart</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mt-2">
+        <a href="shop.html" style="color: var(--primary-green);">&larr; Back to Shop</a>
+
+        <div class="product-details" style="display: flex; flex-wrap: wrap; gap: 40px; margin-top: 2rem;">
+            <div style="flex: 1; min-width: 300px;">
+                <img id="productImage" src="assets/images/seed_packet_tomato.png" alt="Product Image"
+                    style="width: 100%; border-radius: 8px; box-shadow: var(--shadow);"
+                    onerror="this.src='https://placehold.co/600x600?text=Product+Image'">
+            </div>
+
+            <div style="flex: 1; min-width: 300px;">
+                <h1 id="productTitle" style="font-size: 3rem; margin-bottom: 0.5rem;">Loading...</h1>
+                <p id="productPrice" class="product-price" style="font-size: 2rem; color: var(--accent-color);">£0.00
+                </p>
+                <div id="productDescription" style="margin: 2rem 0;">
+                    <p>Loading product details...</p>
+                </div>
+
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input type="number" id="quantityInput" value="1" min="1"
+                        style="padding: 10px; width: 70px; font-size: 1.2rem; border: 1px solid #ccc; border-radius: 4px;">
+                    <button class="btn add-to-cart" id="addToCartBtn" data-id="1" data-name="Product" data-price="0"
+                        style="padding: 12px 30px; font-size: 1.2rem;">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Products -->
+    <section class="container mt-2 mb-2">
+        <h2 class="section-title">You Might Also Like</h2>
+        <div id="relatedProducts" class="product-grid">
+            <!-- Populated by JS -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                &copy; 2026 Greenfeen. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script>
+        // ─── Product Data Store ───
+        const products = {
+            1: {
+                name: "Heirloom Tomato Seeds", price: 3.50, image: "assets/images/seed_packet_tomato.png", category: "seeds",
+                desc: "Experience the true taste of summer with our Heirloom Tomato seeds. Passed down through generations, these seeds produce robust plants with fruit that is bursting with flavor. Perfect for slicing, salads, or making your own sauces.",
+                details: [["Type", "Indeterminate"], ["Days to Harvest", "75-80 days"], ["Sun", "Full Sun"], ["Certified", "Non-GMO & Organic"]]
+            },
+            2: {
+                name: "Classic Terracotta Pot", price: 9.50, image: "assets/images/pot_clay.png", category: "pots",
+                desc: "Handcrafted from natural clay, this classic terracotta pot provides excellent drainage and breathability for healthy root systems. Its timeless design suits any garden or windowsill.",
+                details: [["Diameter", "20cm"], ["Material", "Natural Clay"], ["Drainage", "Built-in hole"], ["Finish", "Unglazed"]]
+            },
+            3: {
+                name: "Ergonomic Trowel", price: 14.50, image: "assets/images/tool_trowel.png", category: "tools",
+                desc: "Our best-selling trowel features a stainless steel blade with an ergonomic ash wood handle. Perfectly balanced for digging, planting, and transplanting.",
+                details: [["Blade", "Stainless Steel"], ["Handle", "Ash Wood"], ["Length", "32cm"], ["Weight", "220g"]]
+            },
+            4: {
+                name: "Genovese Basil Seeds", price: 2.95, image: "assets/images/seed_packet_basil.png", category: "seeds",
+                desc: "The gold standard of culinary basil. Large, aromatic leaves with a sweet, slightly peppery flavour. Essential for pesto, caprese salads, and Italian cooking.",
+                details: [["Variety", "Genovese"], ["Days to Harvest", "60-70 days"], ["Sun", "Full Sun"], ["Seeds per Pack", "~200"]]
+            },
+            5: {
+                name: "Pro Pruning Shears", price: 18.00, image: "assets/images/tool_shears.png", category: "tools",
+                desc: "Professional-grade bypass pruning shears with hardened carbon steel blades. Features a comfortable ergonomic grip and a safety lock mechanism.",
+                details: [["Blade", "Carbon Steel"], ["Cut Capacity", "25mm"], ["Lock", "Safety lock"], ["Handed", "Right/Left"]]
+            },
+            6: {
+                name: "Giant Sunflower Seeds", price: 3.00, image: "assets/images/seed_packet_sunflower.png", category: "seeds",
+                desc: "Grow towering sunflowers up to 3 metres tall! These cheerful giants are easy to grow and produce edible seeds loved by birds and humans alike.",
+                details: [["Height", "Up to 3m"], ["Days to Bloom", "70-80 days"], ["Sun", "Full Sun"], ["Seeds per Pack", "~30"]]
+            },
+            7: {
+                name: "Vintage Watering Can", price: 22.00, image: "assets/images/tool_watering_can.png", category: "tools",
+                desc: "A beautiful zinc-finished watering can with a classic design. Holds 5 litres and includes a detachable rose head for gentle watering.",
+                details: [["Capacity", "5 litres"], ["Material", "Zinc-coated Steel"], ["Rose Head", "Detachable"], ["Style", "Vintage"]]
+            },
+            8: {
+                name: "Leather Gardening Gloves", price: 12.50, image: "assets/images/tool_gloves.png", category: "tools",
+                desc: "Premium leather gardening gloves with reinforced fingertips and an adjustable wrist strap. Durable, comfortable, and stylish protection for your hands.",
+                details: [["Material", "Cowhide Leather"], ["Lining", "Cotton"], ["Wrist", "Adjustable Strap"], ["Size", "M/L"]]
+            },
+            9: {
+                name: "English Lavender Seeds", price: 3.25, image: "assets/images/seed_packet_lavender.png", category: "seeds",
+                desc: "Grow your own fragrant English lavender. These hardy perennials produce beautiful purple spikes that attract bees and butterflies. Perfect for borders, pots, or drying.",
+                details: [["Variety", "Lavandula angustifolia"], ["Bloom", "Summer"], ["Sun", "Full Sun"], ["Perennial", "Yes"]]
+            },
+            10: {
+                name: "Boston Fern", price: 15.00, image: "assets/images/plant_fern.png", category: "plants",
+                desc: "A lush, trailing houseplant with delicate fronds. Boston Ferns thrive in humid conditions with bright, indirect light. An excellent air purifier.",
+                details: [["Light", "Bright Indirect"], ["Water", "Keep moist"], ["Humidity", "High"], ["Pet Safe", "Yes"]]
+            },
+            11: {
+                name: "Hand Cultivator", price: 8.95, image: "assets/images/tool_cultivator.png", category: "tools",
+                desc: "Three-pronged hand cultivator ideal for loosening soil, removing weeds, and aerating around plants. Comfortable soft-grip handle.",
+                details: [["Prongs", "3"], ["Material", "Carbon Steel"], ["Handle", "Soft Grip"], ["Length", "30cm"]]
+            },
+            12: {
+                name: "Organic Potting Mix", price: 6.50, image: "assets/images/soil_mix.png", category: "soil",
+                desc: "A premium organic potting mix blended for container plants. Contains peat-free compost, perlite, and slow-release nutrients for healthy growth all season.",
+                details: [["Weight", "10 litres"], ["Type", "Peat-Free"], ["Nutrients", "Slow-Release"], ["Organic", "Yes"]]
+            },
+            13: {
+                name: "White Ceramic Planter", price: 16.00, image: "assets/images/pot_ceramic_white.png", category: "pots",
+                desc: "A sleek, minimalist ceramic planter finished in matte white. Features a built-in saucer to catch excess water and protect surfaces. Perfect for modern interiors.",
+                details: [["Diameter", "18cm"], ["Material", "Glazed Ceramic"], ["Saucer", "Built-in"], ["Finish", "Matte White"]]
+            },
+            14: {
+                name: "Woven Hanging Basket", price: 14.00, image: "assets/images/pot_hanging_basket.png", category: "pots",
+                desc: "A beautiful handwoven rattan hanging basket with a coconut coir liner. Includes a sturdy chain for suspension. Ideal for trailing plants and petunias.",
+                details: [["Diameter", "30cm"], ["Material", "Natural Rattan"], ["Liner", "Coconut Coir"], ["Chain Length", "40cm"]]
+            },
+            15: {
+                name: "Snake Plant", price: 12.00, image: "assets/images/plant_snake.png", category: "plants",
+                desc: "One of the hardiest houseplants around. The Snake Plant (Sansevieria) tolerates low light, irregular watering, and still purifies your air. A must-have for beginners.",
+                details: [["Light", "Low to Bright Indirect"], ["Water", "Every 2-3 weeks"], ["Height", "40-60cm"], ["Air Purifying", "Yes"]]
+            },
+            16: {
+                name: "Succulent Trio", price: 18.50, image: "assets/images/plant_succulent.png", category: "plants",
+                desc: "Three beautiful assorted mini succulents presented in matching terracotta pots. Low-maintenance and gorgeous on any desk, shelf, or windowsill.",
+                details: [["Quantity", "3 plants"], ["Pot Size", "7cm each"], ["Light", "Bright Indirect"], ["Water", "Sparingly"]]
+            },
+            17: {
+                name: "Cactus & Succulent Soil", price: 5.50, image: "assets/images/soil_cactus_mix.png", category: "soil",
+                desc: "A specially formulated fast-draining soil mix designed for cacti, succulents, and other arid-climate plants. Contains perlite and coarse sand for optimal drainage.",
+                details: [["Weight", "5 litres"], ["Drainage", "Fast-draining"], ["Contains", "Perlite & Sand"], ["Organic", "Yes"]]
+            },
+            18: {
+                name: "Bark Mulch", price: 7.95, image: "assets/images/soil_mulch.png", category: "soil",
+                desc: "Natural pine bark mulch that helps retain soil moisture, suppress weeds, and regulate soil temperature. Gives beds a tidy, professional finish.",
+                details: [["Weight", "20 litres"], ["Material", "Pine Bark"], ["Use", "Borders & Beds"], ["Natural", "Yes"]]
+            }
+        };
+
+        // ─── Load Product from URL ───
+        const params = new URLSearchParams(window.location.search);
+        const id = parseInt(params.get('id')) || 1;
+        const product = products[id] || products[1];
+
+        // Populate page
+        document.getElementById('productTitle').textContent = product.name;
+        document.getElementById('productPrice').textContent = '£' + product.price.toFixed(2);
+        document.getElementById('productImage').src = product.image;
+        document.getElementById('productImage').alt = product.name;
+        document.title = product.name + ' | Greenfeen';
+
+        // Populate description
+        let descHTML = `<p>${product.desc}</p><br><ul style="list-style: disc; padding-left: 20px;">`;
+        product.details.forEach(([label, value]) => {
+            descHTML += `<li><strong>${label}:</strong> ${value}</li>`;
+        });
+        descHTML += '</ul>';
+        document.getElementById('productDescription').innerHTML = descHTML;
+
+        // Update add-to-cart button
+        const btn = document.getElementById('addToCartBtn');
+        btn.dataset.id = id;
+        btn.dataset.name = product.name;
+        btn.dataset.price = product.price;
+
+        // ─── Related Products ───
+        const relatedContainer = document.getElementById('relatedProducts');
+        const relatedIds = Object.keys(products)
+            .map(Number)
+            .filter(pid => pid !== id && products[pid].category === product.category)
+            .slice(0, 3);
+
+        // If not enough same-category, fill with random others
+        if (relatedIds.length < 2) {
+            const others = Object.keys(products).map(Number).filter(pid => pid !== id && !relatedIds.includes(pid));
+            while (relatedIds.length < 3 && others.length > 0) {
+                relatedIds.push(others.shift());
+            }
+        }
+
+        relatedIds.forEach(rid => {
+            const rp = products[rid];
+            relatedContainer.innerHTML += `
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="${rp.image}" alt="${rp.name}"
+                            onerror="this.src='https://placehold.co/400x400?text=${encodeURIComponent(rp.name)}'">
+                    </div>
+                    <div class="product-info">
+                        <h3>${rp.name}</h3>
+                        <p class="product-price">£${rp.price.toFixed(2)}</p>
+                        <a href="product.html?id=${rid}" class="btn" style="display: inline-block;">View Details</a>
+                    </div>
+                </div>
+            `;
+        });
+    </script>
+</body>
+
+</html>

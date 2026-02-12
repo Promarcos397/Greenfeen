@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Greenfeen</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init('UuWtOedV3tNUGaW5U');
+        window.EMAILJS_CONFIGURED = true;
+        window.EMAILJS_SERVICE_ID = 'service_tr5s2hp';
+        window.EMAILJS_CONTACT_TEMPLATE_ID = 'template_contact';
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="nav-left">
+                    <a href="shop.html">Shop</a>
+                    <a href="tips.html">Gardening Tips</a>
+                </div>
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <i class="ph-fill ph-plant" style="font-size: 2rem; color: var(--primary-green);"></i>
+                    Greenfeen
+                </a>
+                <div class="nav-right">
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html" class="active">Contact</a>
+                    <div class="cart-icon" onclick="window.location.href='cart.html'">
+                        <i class="ph ph-shopping-cart"></i> <span class="cart-count">0</span>
+                    </div>
+                </div>
+                <div class="hamburger"><i class="ph ph-list"></i></div>
+                <div class="nav-mobile">
+                    <a href="shop.html">Shop</a>
+                    <a href="tips.html">Gardening Tips</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="cart.html">🛒 Cart</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mt-2">
+        <div style="display: flex; flex-wrap: wrap; gap: 50px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h1>Get in Touch</h1>
+                <p>Have a question about your order or need gardening advice? We're here to help.</p>
+
+                <div style="margin-top: 2rem;">
+                    <h3>Visit Us</h3>
+                    <p>123 Garden Lane<br>Botanical City, EQ 40404</p>
+                    <br>
+                    <h3>Email Us</h3>
+                    <p>hello@greenfeen.example.com</p>
+                    <br>
+                    <h3>Call Us</h3>
+                    <p>(555) 123-4567</p>
+                </div>
+            </div>
+
+            <div
+                style="flex: 1; min-width: 300px; background: var(--white); padding: 2rem; border-radius: 8px; box-shadow: var(--shadow);">
+                <form id="contactForm">
+                    <div style="margin-bottom: 1rem;">
+                        <label for="name" style="display: block; margin-bottom: 5px; font-weight: bold;">Name</label>
+                        <input type="text" id="name" name="name" required
+                            style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email</label>
+                        <input type="email" id="email" name="email" required
+                            style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <label for="subject"
+                            style="display: block; margin-bottom: 5px; font-weight: bold;">Subject</label>
+                        <select id="subject" name="subject"
+                            style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                            <option value="order">Order Inquiry</option>
+                            <option value="product">Product Question</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <label for="message"
+                            style="display: block; margin-bottom: 5px; font-weight: bold;">Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                            style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                &copy; 2026 Greenfeen. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
