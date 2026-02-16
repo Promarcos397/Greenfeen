@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Greenfeen</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="nav-left">
+                    <a href="shop.html">Shop</a>
+                    <a href="tips.html">Gardening Tips</a>
+                </div>
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <i class="ph-fill ph-plant" style="font-size: 2rem; color: var(--primary-green);"></i>
+                    Greenfeen
+                </a>
+                <div class="nav-right">
+                    <a href="about.html" class="active">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <div class="cart-icon" onclick="window.location.href='cart.html'">
+                        <i class="ph ph-shopping-cart"></i> <span class="cart-count">0</span>
+                    </div>
+                </div>
+                <div class="hamburger"><i class="ph ph-list"></i></div>
+                <div class="nav-mobile">
+                    <a href="shop.html">Shop</a>
+                    <a href="tips.html">Gardening Tips</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="cart.html">🛒 Cart</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mt-2">
+        <div class="text-center">
+            <h1>Our Roots</h1>
+            <p style="max-width: 700px; margin: 0 auto 3rem; font-size: 1.2rem;">Cultivating a greener future, one seed
+                at a time.</p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin-bottom: 4rem;">
+            <div style="flex: 1; min-width: 300px;">
+                <img src="assets/images/about_greenhouse.png" alt="Greenfeen Greenhouse"
+                    style="border-radius: 8px; box-shadow: var(--shadow);"
+                    onerror="this.src='https://placehold.co/600x400?text=Our+Greenhouse'">
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <h2>Growing Together</h2>
+                <p>Greenfeen began in a small backyard shed with a handful of heirloom tomato seeds and a dream. We
+                    believed that everyone deserves the joy of watching something grow. Today, we curated a selection of
+                    the finest organic seeds, sustainable pots, and durable tools to help you build your own personal
+                    sanctuary.</p>
+                <br>
+                <p>We are committed to sustainability. Our packaging is 100% compostable, and we work exclusively with
+                    growers who prioritize soil health and biodiversity. When you plant with Greenfeen, you're planting
+                    for the future.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Meet the Team</h2>
+        <div class="product-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div class="product-card text-center" style="padding: 2rem;">
+                <img src="https://placehold.co/150x150?text=Sarah" style="border-radius: 50%; margin: 0 auto 1rem;"
+                    alt="Sarah">
+                <h3>Sarah Green</h3>
+                <p style="color: var(--accent-color);">Founder & Head Grower</p>
+                <p>Loves: Sunflowers & Soil</p>
+            </div>
+            <div class="product-card text-center" style="padding: 2rem;">
+                <img src="https://placehold.co/150x150?text=Mike" style="border-radius: 50%; margin: 0 auto 1rem;"
+                    alt="Mike">
+                <h3>Mike Feen</h3>
+                <p style="color: var(--accent-color);">Logistics Wizard</p>
+                <p>Loves: Logistics & Lavender</p>
+            </div>
+            <div class="product-card text-center" style="padding: 2rem;">
+                <img src="https://placehold.co/150x150?text=Botanibot" style="border-radius: 50%; margin: 0 auto 1rem;"
+                    alt="Botanibot">
+                <h3>Botanibot</h3>
+                <p style="color: var(--accent-color);">Digital Plant Helper</p>
+                <p>Loves: Algorithms & Aloe</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                &copy; 2026 Greenfeen. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

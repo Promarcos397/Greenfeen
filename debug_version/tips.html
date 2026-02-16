@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gardening Tips | Greenfeen</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="nav-left">
+                    <a href="shop.html">Shop</a>
+                    <a href="tips.html" class="active">Gardening Tips</a>
+                </div>
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <i class="ph-fill ph-plant" style="font-size: 2rem; color: var(--primary-green);"></i>
+                    Greenfeen
+                </a>
+                <div class="nav-right">
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <div class="cart-icon" onclick="window.location.href='cart.html'">
+                        <i class="ph ph-shopping-cart"></i> <span class="cart-count">0</span>
+                    </div>
+                </div>
+                <div class="hamburger"><i class="ph ph-list"></i></div>
+                <div class="nav-mobile">
+                    <a href="shop.html">Shop</a>
+                    <a href="tips.html">Gardening Tips</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="cart.html">🛒 Cart</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mt-2">
+        <h1>Green Wisdom</h1>
+        <p class="mb-2">Expert advice to help your garden thrive.</p>
+
+        <div style="display: grid; gap: 30px;">
+            <!-- Article 1 -->
+            <article
+                style="display: flex; gap: 20px; background: var(--white); padding: 20px; border-radius: 8px; box-shadow: var(--shadow-sm); flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 250px;">
+                    <img src="assets/images/tip_seed_starting.jpg" alt="Seed Starting"
+                        style="width: 100%; border-radius: 4px;"
+                        onerror="this.src='https://placehold.co/400x250?text=Seed+Starting'">
+                </div>
+                <div style="flex: 2; min-width: 300px;">
+                    <h3><a href="#" style="text-decoration: none; color: var(--primary-green);">The Ultimate Guide to
+                            Seed Starting</a></h3>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 10px;">Feb 10, 2026 • 5 min read</p>
+                    <p>Starting seeds indoors gives you a head start on the growing season. Learn the secrets to soil
+                        temperature, light requirements, and preventing common issues like "damping off." The key is
+                        patience and the right environment...</p>
+                    <br>
+                    <a href="#" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">Read More</a>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article
+                style="display: flex; gap: 20px; background: var(--white); padding: 20px; border-radius: 8px; box-shadow: var(--shadow-sm); flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 250px;">
+                    <img src="assets/images/tip_watering.jpg" alt="Watering Tips"
+                        style="width: 100%; border-radius: 4px;"
+                        onerror="this.src='https://placehold.co/400x250?text=Watering+Tips'">
+                </div>
+                <div style="flex: 2; min-width: 300px;">
+                    <h3><a href="#" style="text-decoration: none; color: var(--primary-green);">Don't Drown Your
+                            Plants!</a></h3>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 10px;">Jan 28, 2026 • 3 min read</p>
+                    <p>Overwatering is the #1 killer of houseplants. Discover the "knuckle test" and learn why drainage
+                        holes are non-negotiable. Typically, it's better to underwater than overwater...</p>
+                    <br>
+                    <a href="#" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">Read More</a>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article
+                style="display: flex; gap: 20px; background: var(--white); padding: 20px; border-radius: 8px; box-shadow: var(--shadow-sm); flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 250px;">
+                    <img src="assets/images/tip_companion_planting.jpg" alt="Companion Planting"
+                        style="width: 100%; border-radius: 4px;"
+                        onerror="this.src='https://placehold.co/400x250?text=Companion+Planting'">
+                </div>
+                <div style="flex: 2; min-width: 300px;">
+                    <h3><a href="#" style="text-decoration: none; color: var(--primary-green);">Companion Planting
+                            101</a></h3>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 10px;">Jan 15, 2026 • 4 min read</p>
+                    <p>Did you know tomatoes love basil but hate potatoes? Companion planting utilizes natural plant
+                        relationships to repel pests and improve flavor. Here are the best friends (and enemies) in your
+                        garden...</p>
+                    <br>
+                    <a href="#" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">Read More</a>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                &copy; 2026 Greenfeen. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
